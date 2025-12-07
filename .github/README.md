@@ -78,12 +78,50 @@ The pipeline generates and stores the following artifacts:
 
 - **frontend-build**: Built React application (client/dist)
 - **backend-artifacts**: Backend source code (excluding node_modules)
-- **backend-coverage**: Jest coverage reports
-- **backend-test-results**: Jest test result files
+- **backend-coverage**: Jest coverage reports (HTML, LCOV, JSON)
+- **backend-test-results**: Jest JUnit XML test results
 - **cypress-screenshots**: Screenshots from failed Cypress tests
 - **cypress-videos**: Video recordings of Cypress test runs
+- **cypress-test-results**: Cypress JUnit XML test results
 
 Artifacts are retained for 7 days.
+
+## 📈 Test Reporting (Phase 2)
+
+### Automatic Test Result Publishing
+
+Test results are automatically published to GitHub:
+
+- **PR Comments**: Test results appear as comments on pull requests
+- **GitHub Checks**: Detailed test results in the Checks tab
+- **Test Summary**: Markdown summary in workflow run
+- **Coverage Reports**: Coverage information in summary
+
+### Viewing Test Results
+
+1. **In Pull Requests**:
+
+   - Test results automatically appear as comments
+   - Click "Details" to see full test report
+   - View pass/fail status for each test
+
+2. **In GitHub Checks**:
+
+   - Navigate to PR → Checks tab
+   - Click on "Backend Test Results" or "Frontend Test Results"
+   - View detailed test execution and failures
+
+3. **In Workflow Run**:
+   - Go to Actions → Select workflow run
+   - Scroll to "Test Summary" job
+   - View aggregated test results and coverage
+
+### Test Report Formats
+
+- **JUnit XML**: Industry-standard format for both Jest and Cypress
+- **JSON**: Cypress results in JSON format
+- **HTML**: Coverage reports in HTML format
+- **LCOV**: Coverage data for external tools
 
 ## 🐛 Troubleshooting
 
