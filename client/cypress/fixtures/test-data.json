@@ -1,0 +1,39 @@
+{
+  "users": {
+    "validUser": {
+      "name": "Test User",
+      "email": "testuser@example.com",
+      "password": "password123"
+    },
+    "invalidUser": {
+      "email": "invalid-email",
+      "password": "123"
+    }
+  },
+  "tasks": {
+    "validTask": {
+      "title": "Test Task",
+      "description": "Test Description",
+      "dueDate": "2024-12-31",
+      "priority": "High"
+    },
+    "minimalTask": {
+      "title": "Minimal Task"
+    },
+    "taskWithTags": {
+      "title": "Task with Tags",
+      "description": "Task description",
+      "priority": "Medium",
+      "tags": []
+    }
+  },
+  "tags": {
+    "validTag": {
+      "name": "Work"
+    },
+    "tagWithSpecialChars": {
+      "name": "Tag-Name_123"
+    }
+  }
+}
+
